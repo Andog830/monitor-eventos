@@ -36,8 +36,8 @@ def hacer_scraping():
 def enviar_notificacion(mensaje):
     # Por ahora solo imprime, luego configuramos notificaciones
     print(f"NOTIFICACIÓN: {mensaje}")'''
-
-print('funciona')
+    
+    print('funciona')
 
 if __name__ == "__main__":
     print("🔍 Iniciando scraping...")
