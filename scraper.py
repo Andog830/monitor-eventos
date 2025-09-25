@@ -4,7 +4,7 @@ import time
 import os
 
 def hacer_scraping():
-    try:
+    '''try:
         # URL que quieres monitorear (cambia esta por la tuya)
         url = "https://www.tuboleta.com/es/resultados-de-busqueda?s=Fucks+News&ciudades=All&categorias=All&fecha_inicio=&fecha_final="
         
@@ -35,7 +35,9 @@ def hacer_scraping():
 
 def enviar_notificacion(mensaje):
     # Por ahora solo imprime, luego configuramos notificaciones
-    print(f"NOTIFICACIÓN: {mensaje}")
+    print(f"NOTIFICACIÓN: {mensaje}")'''
+
+print('funciona')
 
 if __name__ == "__main__":
     print("🔍 Iniciando scraping...")
