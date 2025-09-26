@@ -26,6 +26,14 @@ jobs:
     - name: Ejecutar scraper
       run: python scraper.py
 
+    - name: Guardar cambios en JSON (si hay nuevos eventos)
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add eventos.json
+        git diff --staged --quiet || git commit -m "Actualizar eventos notificados"
+        git push
+
 env:
   TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
   TELEGRAM_CHAT_FELIPE: ${{ secrets.TELEGRAM_CHAT_FELIPE }}
