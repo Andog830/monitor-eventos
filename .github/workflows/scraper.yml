@@ -5,7 +5,10 @@ on:
     - cron: '*/5 * * * *'
   # Permite ejecución manual desde GitHub
   workflow_dispatch:
-
+  
+permissions:
+  contents: write
+  
 jobs:
   scrape:
     runs-on: ubuntu-latest
@@ -13,6 +16,8 @@ jobs:
     steps:
     - name: Descargar código
       uses: actions/checkout@v4  # Versión actualizada
+      with: 
+        token: ${{ secrets.GITHUB_TOKEN }}
       
     - name: Configurar Python
       uses: actions/setup-python@v4
