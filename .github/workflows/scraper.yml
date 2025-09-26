@@ -2,7 +2,7 @@ name: Monitor de Eventos
 on:
   schedule:
     # Ejecuta cada 10 minutos - formato cron: "minuto hora dia mes dia_semana"
-    - cron: '*/10 * * * *'
+    - cron: '*/5 * * * *'
   # Permite ejecución manual desde GitHub
   workflow_dispatch:
   
