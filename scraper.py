@@ -116,7 +116,7 @@ def verificador(eventos_dict):
 
 def notificador(eventos_nuevos):
     #{'FUCKS NEWS NOTICREO - B/MANGA': {'ciudad': 'Bucaramanga', 'lugar': 'Auditorio Luis A. Calvo', 'fecha': 'Mar 30 Sep'}, 'FUCKS NEWS NOTICREO - CHÍA': {'ciudad': 'Chía', 'lugar': 'Teatro Jorge Arango Tamayo - Chia', 'fecha': 'Lun 6 Oct'},'FUCKS NEWS NOTICREO - BOGOTÁ': {'ciudad': 'Bogotá', 'lugar': 'Teatro Jorge Elíecer Gaitán', 'fecha': 'Mar 28 Oct'},'FUCKS NEWS NOTICREO - BERLIN': {'ciudad': 'Berlín', 'lugar': 'Olympiastadion', 'fecha': 'Lun 24 Nov'}})
-    chats_id = [os.getenv('TELEGRAM_CHAT_FELIPE')]
+    chats_id = [os.getenv('TELEGRAM_CHAT_BELEN'), os.getenv('TELEGRAM_CHAT_FELIPE')]
     if eventos_nuevos:
           chat = f"https://api.telegram.org/bot{token}/sendMessage"
           for evento in eventos_nuevos:
