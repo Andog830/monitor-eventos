@@ -101,7 +101,10 @@ def verificador(eventos_dict):
     lista_nuevos = list(eventos_dict.keys())
 
     for i in lista_ex:
-        lista_nuevos.remove(i)
+        try:
+            lista_nuevos.remove(i)
+        except:
+            continue
 
     if lista_nuevos:
         nuevos = {}
