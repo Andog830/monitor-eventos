@@ -153,20 +153,3 @@ https://www.tuboleta.com/es/resultados-de-busqueda?s=Fucks+News"""
 
 if __name__ == "__main__":
     notificador(verificador({'FUCKS NEWS NOTICREO - B/MANGA': {'ciudad': 'Bucaramanga', 'lugar': 'Auditorio Luis A. Calvo', 'fecha': 'Mar 30 Sep'}, 'FUCKS NEWS NOTICREO - CHÍA': {'ciudad': 'Chía', 'lugar': 'Teatro Jorge Arango Tamayo - Chia', 'fecha': 'Lun 6 Oct'},'FUCKS NEWS NOTICREO - BOGOTÁ': {'ciudad': 'Bogotá', 'lugar': 'Teatro Jorge Elíecer Gaitán', 'fecha': 'Mar 28 Oct'},'FUCKS NEWS NOTICREO - BERLIN': {'ciudad': 'Berlín', 'lugar': 'Olympiastadion', 'fecha': 'Lun 24 Nov'}}))
-
-
-#Chat Felipe: 6182732180
-#Chat Belén: 
-
-
-# url = f"https://api.telegram.org/bot8279891094:AAEkMZ4i3Td098SvHApby4EXtOF4VifbqfI/getUpdates"
-# response = requests.get(url)
-# datos = response.json()
-# #for evento in eventos_nuevos:
-# if datos['ok'] and datos['result']:
-#     chat_id = datos['result'][0]['message']['chat']['id']
-#     print(f"✅ Tu Chat ID es: {chat_id}")
-#     return chat_id
-# else:
-#     print("❌ Envía un mensaje a tu bot primero")
-#     return None
