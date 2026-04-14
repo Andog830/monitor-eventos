@@ -78,7 +78,8 @@ def scraping_tuboleta():
                         fecha = "Fecha no disponible"
                     
                     # Agregar al diccionario
-                    eventos_programados[nombre] = {
+                    clave = f"{nombre} | {fecha} | {ciudad}"
+                    eventos_programados[clave] = {
                         'ciudad': ciudad,
                         'lugar': lugar,
                         'fecha': fecha
@@ -95,27 +96,32 @@ def scraping_tuboleta():
         return []
 
 def verificador(eventos_dict):
-    with open('eventos.json', 'r', encoding='utf-8') as f: #{'FUCKS NEWS NOTICREO - B/MANGA': {'ciudad': 'Bucaramanga', 'lugar': 'Auditorio Luis A. Calvo', 'fecha': 'Mar 30 Sep'}, 'FUCKS NEWS NOTICREO - CHÍA': {'ciudad': 'Chía', 'lugar': 'Teatro Jorge Arango Tamayo - Chia', 'fecha': 'Lun 6 Oct'}}
-        eventos_existentes = json.load(f)
-    lista_ex = list(eventos_existentes.keys())
-    lista_nuevos = list(eventos_dict.keys())
+    # Cargar existentes (o crear vacío si no existe)
+    try:
+        with open('eventos.json', 'r', encoding='utf-8') as f:
+            eventos_existentes = json.load(f)
+    except FileNotFoundError:
+        eventos_existentes = {}
 
-    for i in lista_ex:
-        try:
-            lista_nuevos.remove(i)
-        except:
-            continue
+    nuevos = {}
 
-    if lista_nuevos:
-        nuevos = {}
-        for k in lista_nuevos:
-            eventos_existentes[k] = eventos_dict[k]
+    # Detectar nuevos eventos
+    for k in eventos_dict:
+        if k not in eventos_existentes:
             nuevos[k] = eventos_dict[k]
-        with open('eventos.json', 'w', encoding='utf-8') as f:
-                json.dump(eventos_existentes, f, ensure_ascii=False, indent=4)
-        return nuevos
-    else:
-        return
+
+    # 🔥 SINCRONIZACIÓN (opción 2 bien hecha)
+    # Mantener solo los que siguen en la página
+    eventos_actualizados = {}
+
+    for k in eventos_dict:
+        eventos_actualizados[k] = eventos_dict[k]
+
+    # Guardar estado actualizado
+    with open('eventos.json', 'w', encoding='utf-8') as f:
+        json.dump(eventos_actualizados, f, ensure_ascii=False, indent=4)
+
+    return nuevos if nuevos else None
 
 def notificador(eventos_nuevos):
     #{'FUCKS NEWS NOTICREO - B/MANGA': {'ciudad': 'Bucaramanga', 'lugar': 'Auditorio Luis A. Calvo', 'fecha': 'Mar 30 Sep'}, 'FUCKS NEWS NOTICREO - CHÍA': {'ciudad': 'Chía', 'lugar': 'Teatro Jorge Arango Tamayo - Chia', 'fecha': 'Lun 6 Oct'},'FUCKS NEWS NOTICREO - BOGOTÁ': {'ciudad': 'Bogotá', 'lugar': 'Teatro Jorge Elíecer Gaitán', 'fecha': 'Mar 28 Oct'},'FUCKS NEWS NOTICREO - BERLIN': {'ciudad': 'Berlín', 'lugar': 'Olympiastadion', 'fecha': 'Lun 24 Nov'}})
