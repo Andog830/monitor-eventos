@@ -1,62 +1,17 @@
 {
-    "FUCKS NEWS NOTICREO - B/MANGA": {
-        "ciudad": "Bucaramanga",
-        "lugar": "Auditorio Luis A. Calvo",
-        "fecha": "Mar 30 Sep"
-    },
-    "FUCKS NEWS NOTICREO - CHÍA": {
-        "ciudad": "Chía",
-        "lugar": "Teatro Jorge Arango Tamayo - Chia",
-        "fecha": "Lun 6 Oct"
-    },
-    "FUCKS NEWS NOTICREO - ESPECIAL DE HALLOWEEN": {
-        "ciudad": "Bogotá",
-        "lugar": "Teatro Jorge Eliécer Gaitán",
-        "fecha": "Mar 28 Oct"
-    },
-    "FREE COMEDY FEST MEDALLO": {
-        "ciudad": "Medellín",
-        "lugar": "Teatro Universidad de Medellín",
-        "fecha": "Mié 17 Dic"
-    },
-    "FUCKS NEWS NOTICREO - NOVIEMBRE": {
-        "ciudad": "Medellín",
-        "lugar": "Teatro Universidad de Medellín",
-        "fecha": "Mar 25 Nov"
-    },
-    "FUCKS NEWS NOTICREO": {
-        "ciudad": "Cali",
-        "lugar": "Fundación Teatro Calima",
-        "fecha": "Mar 2 Dic"
-    },
-    "FUCKS NEWS NOTICREO - ESPECIAL DE NAVIDAD": {
-        "ciudad": "Bogotá",
-        "lugar": "Teatro Jorge Eliécer Gaitán",
-        "fecha": "Mar 16 Dic"
-    },
-    "FUCKS NEWS NOTICREO - NEIVA": {
-        "ciudad": "Neiva",
-        "lugar": "Teatro Pigoanza - CRA 4 NO 8 - 53",
-        "fecha": "Mar 20 Ene"
-    },
-    "FUCKS NEWS NOTICREO - PEREIRA": {
-        "ciudad": "Pereira",
-        "lugar": "Teatro Santiago Londoño",
-        "fecha": "Mié 28 Ene"
-    },
-    "FUCKS NEWS NOTICREO - TUNJA": {
-        "ciudad": "Tunja",
-        "lugar": "Teatro Maldonado",
-        "fecha": "Mar 3 Mar"
-    },
-    "FUCKS NEWS NOTICREO - MOSQUERA": {
-        "ciudad": "Mosquera",
-        "lugar": "Auditorio Municipal De Mosquera",
-        "fecha": "Mar 10 Mar"
-    },
-    "FUCKS NEWS NOTICREO - Chía": {
+    "FUCKS NEWS NOTICREO - Chía | Mié 15 Abr | Chía": {
         "ciudad": "Chía",
         "lugar": "Teatro Jorge Arango Tamayo - Chia",
         "fecha": "Mié 15 Abr"
+    },
+    "FUCKS NEWS NOTICREO | Lun 20 Abr | SOACHA": {
+        "ciudad": "SOACHA",
+        "lugar": "TEATRO MUNICIPAL SUA",
+        "fecha": "Lun 20 Abr"
+    },
+    "FUCKS NEWS NOTICREO | Lun 27 Abr | Bogotá": {
+        "ciudad": "Bogotá",
+        "lugar": "",
+        "fecha": "Lun 27 Abr"
     }
 }
